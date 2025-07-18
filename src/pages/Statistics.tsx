@@ -5,6 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { BarChart3, TrendingUp, TrendingDown, Eye, Heart, Users, Calendar, Download, Filter } from "lucide-react";
+import { 
+  RevenueChart, 
+  ViewsChart, 
+  ContentDistributionChart, 
+  EngagementChart 
+} from '@/components/charts/ChartComponents';
 
 const Statistics = () => {
   const monthlyStats = [
@@ -198,21 +204,16 @@ const Statistics = () => {
 
           {/* Performance Tab */}
           <TabsContent value="performance" className="space-y-6">
-            <Card className="card-hover">
-              <CardHeader>
-                <CardTitle>Performance Übersicht</CardTitle>
-                <CardDescription>Entwicklung deiner wichtigsten Metriken über die Zeit</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="h-80 bg-gradient-subtle rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <BarChart3 className="w-16 h-16 mx-auto text-muted-foreground mb-4" />
-                    <p className="text-muted-foreground">Performance Chart würde hier angezeigt</p>
-                    <p className="text-sm text-muted-foreground">Integration mit Chart-Library erforderlich</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Charts Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <RevenueChart />
+              <ViewsChart />
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <ContentDistributionChart />
+              <EngagementChart />
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="card-hover">
@@ -376,21 +377,7 @@ const Statistics = () => {
 
           {/* Revenue Tab */}
           <TabsContent value="revenue" className="space-y-6">
-            <Card className="card-hover">
-              <CardHeader>
-                <CardTitle>Umsatz Entwicklung</CardTitle>
-                <CardDescription>Monatliche Einnahmen und Trends</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="h-80 bg-gradient-subtle rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <BarChart3 className="w-16 h-16 mx-auto text-muted-foreground mb-4" />
-                    <p className="text-muted-foreground">Umsatz Chart würde hier angezeigt</p>
-                    <p className="text-sm text-muted-foreground">Integration mit Chart-Library erforderlich</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <RevenueChart />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="card-hover">
