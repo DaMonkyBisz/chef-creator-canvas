@@ -60,17 +60,17 @@ export function AppSidebar() {
 
   return (
     <Sidebar className={collapsed ? "w-14" : "w-64"} collapsible="icon">
-      <SidebarContent className="gradient-primary text-white">
+      <SidebarContent>
         {/* Logo Bereich */}
-        <div className="p-4 border-b border-white/20">
+        <div className="p-4 border-b border-sidebar-border">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-              <ChefHat className="w-5 h-5 text-brand-purple" />
+            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+              <ChefHat className="w-5 h-5 text-primary-foreground" />
             </div>
             {!collapsed && (
               <div>
-                <h1 className="font-bold text-lg">Cheflify</h1>
-                <p className="text-xs text-white/80">Creator Dashboard</p>
+                <h1 className="font-bold text-lg text-sidebar-foreground">Cheflify</h1>
+                <p className="text-xs text-sidebar-foreground/80">Creator Dashboard</p>
               </div>
             )}
           </div>
@@ -78,7 +78,7 @@ export function AppSidebar() {
 
         {/* Hauptnavigation */}
         <SidebarGroup>
-          <SidebarGroupLabel className="text-white/90 text-sm font-semibold">
+          <SidebarGroupLabel className="text-sidebar-foreground/90 text-sm font-semibold">
             {!collapsed && "Hauptbereich"}
           </SidebarGroupLabel>
           <SidebarGroupContent>
@@ -92,8 +92,8 @@ export function AppSidebar() {
                       className={({ isActive }) => 
                         `flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${
                           isActive 
-                            ? "bg-white/20 text-white font-medium" 
-                            : "hover:bg-white/10 text-white/90"
+                            ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" 
+                            : "hover:bg-sidebar-accent/50 text-sidebar-foreground"
                         }`
                       }
                     >
@@ -109,7 +109,7 @@ export function AppSidebar() {
 
         {/* Business Bereich */}
         <SidebarGroup>
-          <SidebarGroupLabel className="text-white/90 text-sm font-semibold">
+          <SidebarGroupLabel className="text-sidebar-foreground/90 text-sm font-semibold">
             {!collapsed && "Business"}
           </SidebarGroupLabel>
           <SidebarGroupContent>
@@ -122,8 +122,8 @@ export function AppSidebar() {
                       className={({ isActive }) => 
                         `flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${
                           isActive 
-                            ? "bg-white/20 text-white font-medium" 
-                            : "hover:bg-white/10 text-white/90"
+                            ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" 
+                            : "hover:bg-sidebar-accent/50 text-sidebar-foreground"
                         }`
                       }
                     >
@@ -139,7 +139,7 @@ export function AppSidebar() {
 
         {/* Tools Bereich */}
         <SidebarGroup>
-          <SidebarGroupLabel className="text-white/90 text-sm font-semibold">
+          <SidebarGroupLabel className="text-sidebar-foreground/90 text-sm font-semibold">
             {!collapsed && "Tools"}
           </SidebarGroupLabel>
           <SidebarGroupContent>
@@ -152,8 +152,8 @@ export function AppSidebar() {
                       className={({ isActive }) => 
                         `flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${
                           isActive 
-                            ? "bg-white/20 text-white font-medium" 
-                            : "hover:bg-white/10 text-white/90"
+                            ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" 
+                            : "hover:bg-sidebar-accent/50 text-sidebar-foreground"
                         }`
                       }
                     >
