@@ -11,7 +11,6 @@ import Community from "./pages/Community";
 import Statistics from "./pages/Statistics";
 import Settings from "./pages/Settings";
 import Promotion from "./pages/Promotion";
-import Packages from "./pages/Packages";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,7 +30,6 @@ const App = () => (
           <Route path="/stats" element={<Statistics />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/promotion" element={<Promotion />} />
-          <Route path="/packages" element={<Packages />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
