@@ -3,7 +3,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "next-themes";
 import Dashboard from "./pages/Dashboard";
 import Recipes from "./pages/Recipes";
 import Finances from "./pages/Finances";
@@ -12,17 +11,17 @@ import Community from "./pages/Community";
 import Statistics from "./pages/Statistics";
 import Settings from "./pages/Settings";
 import Promotion from "./pages/Promotion";
+import Packages from "./pages/Packages";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/recipes" element={<Recipes />} />
@@ -32,12 +31,12 @@ const App = () => (
           <Route path="/stats" element={<Statistics />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/promotion" element={<Promotion />} />
+          <Route path="/packages" element={<Packages />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-      </TooltipProvider>
-    </ThemeProvider>
+    </TooltipProvider>
   </QueryClientProvider>
 );
 
