@@ -10,7 +10,8 @@ import {
   HelpCircle,
   Zap,
   Package,
-  MessageSquare
+  MessageSquare,
+  FolderOpen
 } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -29,6 +30,7 @@ import {
 
 const mainItems = [
   { title: "Übersicht", url: "/", icon: Home },
+  { title: "Content Manager", url: "/content-manager", icon: FolderOpen },
   { title: "Rezepte", url: "/recipes", icon: ChefHat },
   { title: "MealsReelz", url: "/videos", icon: Video },
   { title: "Pakete", url: "/packages", icon: Package },
